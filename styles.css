@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+.button {
+  width: fit-content;
+  padding: 5px 30px;
+  border-radius: 5px;
+  background-color: #3882f6;
+}
+
+.placeholder-img {
+  background-color: gray;
+}
+
+#main {
+  font-family: "Roboto";
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  background-color: #1f2937;
+  color: white;
+}
+
+#navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+#header {
+  display: flex;
+  gap: 20px;
+  padding: 70px 20px;
+
+  background-color: #1f2937;
+  color: white;
+}
