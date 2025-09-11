@@ -1,8 +1,9 @@
 :root {
   --horizontal-padding: 50px;
-  --dark-blue: #1f2937;
   --blue: #3882f6;
-  --light-gray: #e5e7eb;
+  --dark-blue: #1f2937;
+  --gray: #82878f;
+  --light-gray: #cacbcd;
   --white: #f9faf8;
   --bold: 900;
 
@@ -13,6 +14,10 @@ body {
   margin: 0;
 }
 
+#main {
+  font-family: "Roboto";
+}
+
 .button {
   width: fit-content;
   padding: 5px 30px;
@@ -20,14 +25,13 @@ body {
   background-color: var(--blue);
 }
 
-.placeholder-img {
-  background-color: gray;
-  padding: 60px 40px;
+#hero-logo {
+  font-size: 24px;
+  color: var(--white);
+  font-weight: var(--bold);
 }
 
-#main {
-  font-family: "Roboto";
-}
+/* #region: NAVBAR */
 
 #navbar {
   display: flex;
@@ -44,7 +48,11 @@ body {
   gap: 20px;
 }
 
-#header {
+/* #endregion */
+
+/* #region: HERO */
+
+#hero {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -54,10 +62,10 @@ body {
   color: var(--white);
 }
 
-#header-text {
+#hero-text {
   display: flex;
   flex-direction: column;
-  gap: 10px;  
+  gap: 10px;
 }
 
 #hero-main-text {
@@ -66,13 +74,60 @@ body {
   font-weight: var(--bold);
 }
 
-#hero-secondary-text, .header-link-text {
+#hero-secondary-text,
+.header-link-text {
   font-size: 18px;
   color: var(--light-gray);
 }
 
-#hero-logo {
-  font-size: 24px;
-  color: var(--white);
-  font-weight: var(--bold);
+#hero-placeholder-img {
+  background-color: gray;
+  padding: 60px 40px;
 }
+
+/* #endregion */
+
+/* #region: INFO HEADER */
+
+#info-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 50px var(--horizontal-padding);
+}
+
+#info-header-text {
+  font-size: 36px;
+  color: var(--dark-blue);
+  font-weight: var(--bold);
+  text-align: center;
+}
+
+#placeholder-img-container {
+  display: flex;
+  gap: 40px;
+}
+
+.placeholder-img-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+}
+
+.placeholder-img {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+}
+
+.placeholder-img-caption {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray);
+}
+
+/* #endregion */
