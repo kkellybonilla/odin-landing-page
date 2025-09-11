@@ -1,10 +1,23 @@
 :root {
-  --horizontal-padding: 50px;
+  --horizontal-padding: 100px;
+
+  /* colors */
   --blue: #3882f6;
   --dark-blue: #1f2937;
   --gray: #82878f;
-  --light-gray: #cacbcd;
+  --light-gray: #e5e7eb;
   --white: #f9faf8;
+
+  /* font sizes */
+  --xsmall: 14px;
+  --small: 18px;
+  --medium: 24px;
+  --large: 36px;
+  --xlarge: 48px;
+
+  /* font weights */
+  --thin: 300;
+  --normal: 400;
   --bold: 900;
 
   /* TODO: define font size vars */
@@ -16,6 +29,7 @@ body {
 
 #main {
   font-family: "Roboto";
+  font-weight: var(--normal);
 }
 
 .button {
@@ -26,9 +40,9 @@ body {
 }
 
 #hero-logo {
-  font-size: 24px;
-  color: var(--white);
+  font-size: var(--medium);
   font-weight: var(--bold);
+  color: var(--white);
 }
 
 /* #region: NAVBAR */
@@ -69,20 +83,20 @@ body {
 }
 
 #hero-main-text {
-  font-size: 48px;
-  color: var(--white);
+  font-size: var(--xlarge);
   font-weight: var(--bold);
+  color: var(--white);
 }
 
 #hero-secondary-text,
 .header-link-text {
-  font-size: 18px;
+  font-size: var(--xsmall);
   color: var(--light-gray);
 }
 
 #hero-placeholder-img {
-  background-color: gray;
   padding: 60px 40px;
+  background-color: var(--gray);
 }
 
 /* #endregion */
@@ -95,13 +109,15 @@ body {
   align-items: center;
   gap: 30px;
   padding: 50px var(--horizontal-padding);
+
+  background-color: var(--white);
 }
 
 #info-header-text {
-  font-size: 36px;
-  color: var(--dark-blue);
-  font-weight: var(--bold);
   text-align: center;
+  font-size: var(--large);
+  font-weight: var(--bold);
+  color: var(--dark-blue);
 }
 
 #placeholder-img-container {
@@ -114,11 +130,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  width: 100px;
+  width: 150px;
 }
 
 .placeholder-img {
-  width: 100px;
+  width: 150px;
   aspect-ratio: 1/1;
   border: 2px solid var(--blue);
   border-radius: 10px;
@@ -126,8 +142,42 @@ body {
 
 .placeholder-img-caption {
   text-align: center;
-  font-size: 12px;
+  font-size: var(--xsmall);
   color: var(--gray);
+}
+
+/* #endregion */
+
+/* #region: QUOTE SECTION */
+
+#quote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px var(--horizontal-padding);
+
+  background-color: var(--light-gray);
+  color: var(--dark-blue);
+}
+
+#quote-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: calc((150 + 40) * 4px); /* match width of info header section */
+}
+
+.quote {
+  font-size: var(--large);
+  font-weight: var(--thin);
+  font-style: italic;
+}
+
+.quote-source {
+  align-self: flex-end;
+  font-size: var(--small);
+  font-weight: var(--bold);
 }
 
 /* #endregion */
