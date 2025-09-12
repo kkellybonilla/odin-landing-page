@@ -72,7 +72,7 @@ body {
 
 #hero {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 70px var(--horizontal-padding);
 
   background-color: var(--dark-blue);
