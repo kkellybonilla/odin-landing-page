@@ -251,3 +251,19 @@ body {
 }
 
 /* #endregion */
+
+/* #region: FOOTER */
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px var(--horizontal-padding);
+
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-size: var(--xsmall);
+  font-weight: var(--thin);
+}
+
+/* #endregion */
