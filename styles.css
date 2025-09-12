@@ -1,5 +1,5 @@
 :root {
-  --horizontal-padding: 100px;
+  --horizontal-padding: clamp(20px, 15vw, 100px);
 
   /* colors */
   --blue: #3882f6;
@@ -34,9 +34,10 @@ body {
 
 .button {
   width: fit-content;
-  padding: 5px 30px;
+  padding: 5px clamp(15px, 5vw, 30px);
   border-radius: 5px;
   background-color: var(--blue);
+  color: var(--white);
 }
 
 #hero-logo {
@@ -49,9 +50,11 @@ body {
 
 #navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 10px var(--horizontal-padding);
+  gap: 20px;
 
   background-color: var(--dark-blue);
   color: var(--white);
@@ -59,6 +62,7 @@ body {
 
 #navbar-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -68,15 +72,26 @@ body {
 
 #hero {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  justify-content: center;
   padding: 70px var(--horizontal-padding);
 
   background-color: var(--dark-blue);
   color: var(--white);
 }
 
+#hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
 #hero-text {
+  /* sizing is dynamic, but min-width is 300px */
+  flex: 1 1 300px;
+  min-width: 0;
+  max-width: 500px;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -106,7 +121,6 @@ body {
 #info-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
   padding: 50px var(--horizontal-padding);
 
@@ -122,6 +136,8 @@ body {
 
 #placeholder-img-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
 }
 
@@ -163,9 +179,11 @@ body {
 #quote-section-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 10px;
-  width: calc((150 + 40) * 4px); /* match width of info header section */
+
+  /* match width of info header section, but don't exceed viewport width */
+  max-width: min(760px, 100%);
 }
 
 .quote {
@@ -176,8 +194,60 @@ body {
 
 .quote-source {
   align-self: flex-end;
+  max-width: 100%;
   font-size: var(--small);
   font-weight: var(--bold);
+}
+
+/* #endregion */
+
+/* #region: CTA SECTION */
+
+#cta-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 70px var(--horizontal-padding);
+
+  background-color: var(--white);
+  color: var(--white);
+}
+
+#cta-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px 40px;
+  padding: 40px var(--horizontal-padding);
+  border-radius: 5px;
+  max-width: 100%;
+
+  background-color: var(--blue);
+}
+
+#cta-text {
+  /* sizing is dynamic, but min-width is 200px */
+  flex: 1 1 200px;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+}
+
+#cta-primary-text {
+  font-size: var(--small);
+  font-weight: var(--bold);
+}
+
+#cta-secondary-text {
+  font-size: var(--xsmall);
+  font-weight: var(--thin);
+}
+
+#cta-button {
+  border: 2px solid var(--white);
+  border-radius: 5px;
 }
 
 /* #endregion */
